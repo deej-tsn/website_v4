@@ -1,0 +1,14 @@
+package components
+
+templ NavLinkTempl(title string, url string, active bool) {
+    if active  {
+        <div class="navLink active">
+            {title}
+        </div>
+    } else {
+        <a class="navLink" href={templ.URL(url)} >
+            {title}
+        </a>
+    }
+
+}

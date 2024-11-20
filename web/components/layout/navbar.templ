@@ -1,0 +1,13 @@
+package components
+
+templ NavBar(selected int){
+    <nav>
+        @NavLinkTempl("Home", "/" ,selected == 0)
+        <hr class="verticalBar">
+        @NavLinkTempl("Projects", "/projects", selected == 1)
+        <hr class="verticalBar">
+        @NavLinkTempl("Blog", "/blog", selected == 2)
+        <hr class="verticalBar">
+        @NavLinkTempl("Contact", "/contact", selected == 3)
+    </nav>
+}
