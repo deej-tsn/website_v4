@@ -1,0 +1,9 @@
+package components
+
+import "github.com/deej-tsn/website_v4/internal/models"
+
+templ Icon(icon models.ContactIcon) {
+    <a class="contactIcon" href={templ.SafeURL(icon.URL)}  target="_blank" referrerPolicy="no-referrer" >
+        <img alt={icon.Name} src={icon.ImgURL}>
+    </a>
+}

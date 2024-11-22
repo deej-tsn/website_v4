@@ -1,6 +1,9 @@
 package models
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 type (
 	BlogResp struct {
@@ -21,4 +24,25 @@ type (
 		Name  string `toml:"name"`
 		Email string `toml:"email"`
 	}
+
+	SkillIcon struct {
+		Name       string
+		URL        string
+		Experience string
+	}
+
+	ContactIcon struct {
+		ImgURL string
+		URL    string
+		Name   string
+	}
 )
+
+func NewContact(name string, pathToLink string, url string) *ContactIcon {
+	contact := ContactIcon{
+		Name:   name,
+		ImgURL: fmt.Sprintf("%s/%s.svg", pathToLink, name),
+		URL:    url,
+	}
+	return &contact
+}

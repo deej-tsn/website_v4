@@ -7,6 +7,7 @@ import (
 
 	"github.com/deej-tsn/website_v4/internal/helper"
 	"github.com/deej-tsn/website_v4/internal/routes"
+
 	layoutComponents "github.com/deej-tsn/website_v4/web/components/layout"
 	blogComponents "github.com/deej-tsn/website_v4/web/components/pages/blog"
 	homeComponents "github.com/deej-tsn/website_v4/web/components/pages/home"
@@ -17,12 +18,12 @@ func main() {
 	//db := sql.ConnectToDatabase()
 	e := echo.New()
 
-	pathToData := "./data/posts/"
+	pathToPosts := "./data/blog/posts/"
 	pathToWeb := "./web/public"
 
 	//CONTROLLERS
 
-	blogController := routes.NewSlugReader(pathToData)
+	blogController := routes.NewSlugReader(pathToPosts)
 
 	// MIDDLEWARE
 
@@ -42,14 +43,23 @@ func main() {
 		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept},
 	}))
 
-	index := layoutComponents.Index("Home", 0, homeComponents.HomeHub())
+	home := layoutComponents.Index("Home", 0, homeComponents.HomeHub())
+	projectHome := layoutComponents.Index("Project", 1, homeComponents.HomeHub())
 	blogHome := layoutComponents.Index("Blog", 2, blogComponents.Content(blogComponents.LoadPostList()))
 
 	// ROUTES
+
+	///HOME
 	e.GET("/", func(c echo.Context) error {
-		return helper.Render(c, 100, index)
+		return helper.Render(c, 100, home)
 	})
 
+	//PROJECTS
+	e.GET("/projects", func(c echo.Context) error {
+		return helper.Render(c, 100, projectHome)
+	})
+
+	/// BLOG
 	e.GET("/blog", func(c echo.Context) error {
 		return helper.Render(c, 100, blogHome)
 	})
