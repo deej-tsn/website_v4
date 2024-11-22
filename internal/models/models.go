@@ -26,9 +26,8 @@ type (
 	}
 
 	SkillIcon struct {
-		Name       string
-		URL        string
-		Experience string
+		Name   string
+		ImgURL string
 	}
 
 	ContactIcon struct {
@@ -45,4 +44,12 @@ func NewContact(name string, pathToLink string, url string) *ContactIcon {
 		URL:    url,
 	}
 	return &contact
+}
+
+func NewSkill(name string, url string) *SkillIcon {
+	skill := SkillIcon{
+		Name:   name,
+		ImgURL: fmt.Sprintf("fa-brands fa-%s fa-2xl", url),
+	}
+	return &skill
 }

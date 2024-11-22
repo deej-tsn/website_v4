@@ -12,7 +12,6 @@
     --primary-colour: #a8a8a8;
     --secondary-colour: #ffffff;
     --opposite-colour: var(--black);
-    --button_icon : url(../assets/DarkMode.png);
     --paragraph_colour : var(--black);
 }
 
@@ -26,7 +25,7 @@ html {
 
 body { 
     background-color: var(--background-colour);
-    background-image: url(../assets/wall.webp);
+    background-image: url(../assets/other/wall.webp);
     background-repeat: repeat;
     margin: 0px;
     width:  100vw;
@@ -129,7 +128,7 @@ nav a.navLink:hover {
     transform: translateY(-50%);
     margin: 0;
     padding: 0;
-    background-color: #a8a8a8;
+    background-color: var(--primary-colour);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     filter: var(--drop_shadow);
@@ -143,13 +142,19 @@ nav a.navLink:hover {
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    transition: background-color 0.3s ease-in-out ;
-
+    transition-property: background-color;
+    transition: 0.3s ease-in-out ;
 }
-
+.contactIcon img {
+    transition-property: filter;
+    transition: 0.3s ease-in-out ;
+}
 .contactIcon:hover{
     background-color: #514f4f;
+}
 
+.contactIcon:hover img{
+    filter: invert(1);
 }
 
 .contactIcon img {
@@ -157,6 +162,13 @@ nav a.navLink:hover {
     height: 30px;
 }
 
+.contactLine {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    border: #f1f5f8;
+    background-color: var(--white);
+}
 
 
 
@@ -264,7 +276,7 @@ select{
 #homeHero {
     width: 100vw;
     height: 100vh;
-    background-image: url(../assets/bg.jpg);
+    background-image: url(../assets/other/bg.jpg);
     background-repeat: no-repeat;
     background-position: -100px 0px;
     background-size: auto 100vh;
@@ -279,7 +291,7 @@ select{
     width: 40rem;
     height: 20rem;
     transform: translate(-50%, -50%);
-    background-color: #514f4f75;
+    background-color: #514f4fca;
     color: #f1f5f8;
     z-index: 2;
     filter: var(--drop_shadow);
@@ -300,6 +312,33 @@ select{
     display: block;
     z-index: 10;
     padding: 5rem;
+
+}
+#skillList{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column: auto;
+}
+
+.iconSkill {
+    width: 8rem;
+    height: 2rem;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--primary-colour);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconTitle {
+    font-weight: 400;
+    font-size: medium;
+    margin: 2px;
+    margin-left: 5px;
+    text-transform: capitalize;
 
 }
 

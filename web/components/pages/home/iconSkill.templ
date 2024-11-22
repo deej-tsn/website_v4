@@ -2,14 +2,13 @@ package components
 
 import "github.com/deej-tsn/website_v4/internal/models"
 
+
 templ IconSkill(skill models.SkillIcon) {
     <div class="iconSkill">
         
-        <div>
-        </div>
-        <div class=" skillHover">
-            {skill.Name}
-        </div>        
+        <i class={skill.ImgURL}></i>
+        <h3 class="iconTitle">{skill.Name}</h3>
+
     </div>
 
 }
