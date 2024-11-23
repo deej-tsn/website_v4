@@ -1,10 +1,12 @@
 package components
 
+import "github.com/deej-tsn/website_v4/internal/data/skills"
+
 templ Skills() {
     <div id="skills">
         <h1>Skills</h1>
         <hr>
 
-        @SkillsList()
+        @SkillsList(skills.SkillIcons)
     </div>
 }

@@ -2,11 +2,11 @@ package components
 
 import "github.com/deej-tsn/website_v4/internal/models"
 
-var skills [][]string = [][]string{{"javascript","js"}, {"react","react"}, {"java", "java"},{"docker", "docker"}, {"golang", "golang"}, {"CSS", "css"}, {"html", "html5"}, {"Python", "python"}}
-templ SkillsList() {
+
+templ SkillsList(skills []models.SkillIcon) {
     <div id="skillList">
         for _, skill := range skills{
-            @IconSkill(*models.NewSkill(skill[0], skill[1]))
+            @IconSkill(skill)
         }
     
     </div>

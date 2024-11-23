@@ -9,7 +9,7 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import "github.com/deej-tsn/website_v4/internal/models"
-import "github.com/deej-tsn/website_v4/data/contacts"
+import "github.com/deej-tsn/website_v4/internal/data/contacts"
 
 var icons []models.ContactIcon = contacts.GetLinks()
 

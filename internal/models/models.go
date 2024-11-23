@@ -35,6 +35,14 @@ type (
 		URL    string
 		Name   string
 	}
+
+	ProjectHero struct {
+		Title       string
+		Description string
+		ImgURL      string
+		Skills      [][]string
+		Type        string
+	}
 )
 
 func NewContact(name string, pathToLink string, url string) *ContactIcon {

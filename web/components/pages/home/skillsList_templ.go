@@ -10,9 +10,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import "github.com/deej-tsn/website_v4/internal/models"
 
-var skills [][]string = [][]string{{"javascript", "js"}, {"react", "react"}, {"java", "java"}, {"docker", "docker"}, {"golang", "golang"}, {"CSS", "css"}, {"html", "html5"}, {"Python", "python"}}
-
-func SkillsList() templ.Component {
+func SkillsList(skills []models.SkillIcon) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -38,7 +36,7 @@ func SkillsList() templ.Component {
 			return templ_7745c5c3_Err
 		}
 		for _, skill := range skills {
-			templ_7745c5c3_Err = IconSkill(*models.NewSkill(skill[0], skill[1])).Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = IconSkill(skill).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
