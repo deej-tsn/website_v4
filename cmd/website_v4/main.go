@@ -11,6 +11,7 @@ import (
 	layoutComponents "github.com/deej-tsn/website_v4/web/components/layout"
 	blogComponents "github.com/deej-tsn/website_v4/web/components/pages/blog"
 	homeComponents "github.com/deej-tsn/website_v4/web/components/pages/home"
+	projectComponents "github.com/deej-tsn/website_v4/web/components/pages/project"
 )
 
 func main() {
@@ -44,7 +45,7 @@ func main() {
 	}))
 
 	home := layoutComponents.Index("Home", 0, homeComponents.HomeHub())
-	projectHome := layoutComponents.Index("Project", 1, homeComponents.HomeHub())
+	projectHome := layoutComponents.Index("Project", 1, projectComponents.Content())
 	blogHome := layoutComponents.Index("Blog", 2, blogComponents.Content(blogComponents.LoadPostList()))
 
 	// ROUTES

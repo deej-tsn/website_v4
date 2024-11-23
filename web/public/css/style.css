@@ -352,6 +352,14 @@ select{
     padding: 5rem;
 }
 
+#projects{
+    width: 80%;
+    
+    margin: auto;
+    margin-top: 8rem;
+    padding: 2rem;
+}
+
 @media (min-width: 768px) {
     #content {
         width: 70%;

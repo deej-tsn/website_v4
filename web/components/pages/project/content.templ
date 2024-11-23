@@ -1,8 +1,14 @@
 package components
 
-import "github.com/deej-tsn/website_v4/internal/models"
 
 
-templ Content(title string, projects []models.ProjectHero) {
-    
+templ Content() {
+    <div id="projects">
+        <h1>Projects</h1>
+        <div>
+            @Section("Frontend" , nil)
+            @Section("Backend", nil)
+            @Section("Other", nil)
+        </div>
+    </div>
 }
