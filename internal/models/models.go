@@ -41,7 +41,9 @@ type (
 		Description string
 		ImgURL      string
 		Skills      [][]string
-		Type        string
+		TypeOf      string
+		Link        string
+		GithubLink  string
 	}
 )
 
@@ -54,10 +56,22 @@ func NewContact(name string, pathToLink string, url string) *ContactIcon {
 	return &contact
 }
 
-func NewSkill(name string, url string) *SkillIcon {
+func NewSkill(name string, url string, size string) *SkillIcon {
 	skill := SkillIcon{
 		Name:   name,
-		ImgURL: fmt.Sprintf("fa-brands fa-%s fa-2xl", url),
+		ImgURL: fmt.Sprintf("fa-brands fa-%s fa-%s", url, size),
 	}
 	return &skill
+}
+
+func NewProject(title string, description string, imgURL string, skills [][]string, typeOf string, link string) *ProjectHero {
+	project := ProjectHero{
+		Title:       title,
+		Description: description,
+		ImgURL:      imgURL,
+		Skills:      skills,
+		TypeOf:      typeOf,
+		Link:        link,
+	}
+	return &project
 }

@@ -3,14 +3,21 @@ package components
 import "github.com/deej-tsn/website_v4/internal/models"
 
 templ Hero( project models.ProjectHero){
-    <a class="projectHero">
-        <img>
-        <div>
-            <h1>Title</h1>
-            <p>Description</p>
-            <div>
-                
+    <a class="projectHero" href={templ.SafeURL(project.Link)} target="_blank" referrerPolicy="no-referrer" >
+        <img class="heroImg" src={project.ImgURL}>
+        <div class="heroInfo">
+            <div style="display: flex; flex-direction: row; height: 5rem; width: 100%;">
+                <div class="title">
+                    <h3>{project.Title}</h3>
+                </div>
+                <div class="heroSkills">
+                    for _, skill := range project.Skills{
+                        @Icon(*models.NewSkill(skill[0], skill[1], "lg"))
+                    }
+                </div>
             </div>
+            
+            <p>{project.Description}</p>
         </div>
     </a>
 }
