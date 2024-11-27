@@ -5,7 +5,7 @@ import "github.com/deej-tsn/website_v4/internal/data/contacts"
 var icons []models.ContactIcon = contacts.GetLinks()
 
 templ Contact() {
-    <div id="contactContent">
+    <div id="contact" class="hidden">
         for i, icon := range icons {
             @Icon(icon)
             if i+1 != len(icons) {

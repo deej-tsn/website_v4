@@ -19,6 +19,7 @@ templ Index(Title string, page int,  content templ.Component){
     </head>
     <body>
         @NavBar(page)
+        @ContactToggle()
         @Contact()
         @content
         

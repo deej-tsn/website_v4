@@ -1,0 +1,14 @@
+package components
+
+templ Education(location string, certificate string, date string) {
+    <div style=" width:100%; display:flex; flex-direction:row; align-items:center; margin-bottom:1rem;">
+        <div style="width: 80%; text-align:justify; text-wrap:pretty; flex-grow:1; padding-right:5px;" >
+            <b>{location}</b>
+            <br>
+            {certificate}
+        </div>
+        <div>
+             <b>{date}</b>
+        </div>
+    </div>
+}

@@ -1,0 +1,17 @@
+package components
+
+templ ContactToggle() {
+    <script type="text/javascript">
+        function handleClick(event){
+            let contacts = document.getElementById("contact");
+            console.log(contacts.classList);
+            contacts.classList.replace("hidden", "moveOut");
+
+        }
+    
+    
+    </script>
+    <button id="toggle" onclick="handleClick(this)">
+        <img src="/static/assets/contactIcons/Toggle.svg">
+    </button>
+}
