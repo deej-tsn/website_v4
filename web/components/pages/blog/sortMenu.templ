@@ -4,8 +4,8 @@ templ SortMenu() {
     <div class="select_wrap">
         <label for="sortBy">Sort By:</label>
         <select name="sort" id="sortBy" hx-get="/blog/posts" hx-target="#loader" hx-swap="innerHTML" hx-trigger=" load, change">
-            <option value="newest" selected>Newest First</option>     
-            <option value="oldest">Oldest First</option>
+            <option value="newest" selected>Newest to Oldest</option>     
+            <option value="oldest">Oldest to Newest</option>
             
             
         </select>

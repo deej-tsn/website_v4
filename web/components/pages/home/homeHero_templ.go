@@ -29,7 +29,7 @@ func homeHero() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"homeHero\"></div><div id=\"heroCenter\"><h1 style=\"width: fit-content;\">Fullstack Developer  </h1><h3 style=\"width: fit-content; margin: 0;\">London, England</h3></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div><div id=\"homeHero\"></div><div id=\"heroCenter\"><h1 style=\"width: fit-content;\">Fullstack Developer  </h1><h3 style=\"width: fit-content; margin: 0;\">London, England</h3></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

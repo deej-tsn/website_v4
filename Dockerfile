@@ -5,7 +5,7 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . /app
-RUN CGO_ENABLED=0 GOOS=linux go build -o ./tmp/main cmd/blog-go/main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -o ./tmp/main cmd/website_v4/main.go
 
 
 #Deploy

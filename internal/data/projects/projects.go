@@ -18,6 +18,6 @@ var Projects []models.ProjectHero = []models.ProjectHero{
 		"static/assets/projects/ColourGame.png",
 		[][]string{{"react", "react"}, {"javascript", "js"}},
 		"Frontend",
-		"https://wordleclonedempsey.netlify.app",
+		"https://colourgamedempsey.netlify.app/",
 	),
 }
