@@ -113,21 +113,45 @@ nav a.navLink:hover {
 	position: fixed;
 	top: 50%;
 	left: 0.5rem;
-	transform: translate(0,-50%);
 	z-index: 20;
 	border-radius: 50px;
 	padding: 0;
 	margin: 0;
 	display: block;
 	filter: var(--drop_shadow);
-	border: transparent;
-	background-color: black;
+	border: white 5px;
+	background-color: white;
+	transition: 0.3s ease-in-out;
+	transition-property: transform;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	img{
-		width: 100%;
+		width: 2.9rem;
+		height: 2.9rem;
+		border: #a8a8a8 2px;
 		filter: brightness(0) saturate(100%) invert(77%) sepia(10%) saturate(0%) hue-rotate(165deg) brightness(88%) contrast(80%);
+		transition: 0.3s ease-in-out;
+		transition-property: rotate;
+		object-fit: cover;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	
+}
+
+.hiddenToggle {
+	transform: translate(0,-50%);
+}
+
+.exposedToggle{
+	transform: translate(5rem,-50%);
+
+	img {
+		rotate: 180deg;
+	}
 }
 
 #contact {
@@ -203,6 +227,10 @@ code span {
 @media (min-width: 768px) {
 	#content {
 		width: 70%;
+	}
+
+	#toggle{
+		display: none;
 	}
 
 	#contact{

@@ -3,15 +3,25 @@ package components
 templ ContactToggle() {
     <script type="text/javascript">
         function handleClick(event){
+            
             let contacts = document.getElementById("contact");
+            let toggle = document.getElementById("toggle");
             console.log(contacts.classList);
-            contacts.classList.replace("hidden", "moveOut");
+            if(toggle.classList.contains("hiddenToggle")){
+                contacts.classList.replace("hidden", "moveOut");
+                toggle.classList.replace("hiddenToggle", "exposedToggle")
+            }else{
+                contacts.classList.replace( "moveOut","hidden");
+                toggle.classList.replace("exposedToggle","hiddenToggle")
+            }
+
+            
 
         }
     
     
     </script>
-    <button id="toggle" onclick="handleClick(this)">
+    <button id="toggle" class="hiddenToggle" onclick="handleClick(this)">
         <img src="/static/assets/contactIcons/Toggle.svg">
     </button>
 }
