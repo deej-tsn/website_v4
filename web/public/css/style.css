@@ -128,9 +128,8 @@ nav a.navLink:hover {
 	align-items: center;
 
 	img{
-		width: 2.9rem;
-		height: 2.9rem;
-		border: #a8a8a8 2px;
+		width: 3rem;
+		height: 3rem;
 		filter: brightness(0) saturate(100%) invert(77%) sepia(10%) saturate(0%) hue-rotate(165deg) brightness(88%) contrast(80%);
 		transition: 0.3s ease-in-out;
 		transition-property: rotate;

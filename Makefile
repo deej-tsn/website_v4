@@ -11,4 +11,4 @@ build-amd64:
 	docker build -t ${REGISTRY_HOST}:${IMAGE}_amd64 --platform=linux/amd64 .
 
 build-push-amd64:
-	docker build -t ${REGISTRY_HOST}:${IMAGE}_amd64 --platform=linux/amd64 . && docker push ${REGISTRY_HOST}:amd64
+	docker build -t ${REGISTRY_HOST}:${IMAGE}_amd64 --platform=linux/amd64 . && docker push ${REGISTRY_HOST}:${IMAGE}_amd64
