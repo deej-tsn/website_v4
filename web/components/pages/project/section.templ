@@ -5,7 +5,7 @@ import "github.com/deej-tsn/website_v4/internal/models"
 templ Section(title string, projects []models.ProjectHero) {
     <div>
         <h2>{title}</h2>
-        <div style="display: flex; flex-direction:row;">
+        <div class="sectionProjects">
             for _, project := range projects {
             @Hero(project)
         }

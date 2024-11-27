@@ -8,7 +8,16 @@
     height: fit-content;
     filter: var(--drop_shadow);
     border-radius: 5px;
+    
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
 }
+
+
 
 .projectHero {
     display: block;
@@ -22,7 +31,7 @@
     transition: height 0.3s ease-in-out;
     text-decoration: none;
     color: #000000;
-    margin-right: 1rem;
+    margin-bottom: 1rem;
 
     img {
         width: 20rem;
@@ -88,4 +97,40 @@
     p{
         opacity: 0;
     }
+}
+
+.sectionProjects{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Medium Screen */
+@media (min-width: 768px) {
+
+    #projects {
+        h1{
+            text-align: left;
+        }
+        h2{
+            text-align: left;
+        }
+    }
+
+    .projectHero{
+
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+
+    .sectionProjects{
+        flex-direction: row;
+    }
+
+}
+/* Large Screen */
+@media (min-width: 1025px) {
+
 }
