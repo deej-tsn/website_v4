@@ -7,7 +7,7 @@ var skills [][]string = [][]string{{"javascript", "js"}, {"react", "react"}, {"j
 func GenerateSkillsArray(skills [][]string) []models.SkillIcon {
 	skillIcons := []models.SkillIcon{}
 	for _, skill := range skills {
-		skillIcons = append(skillIcons, *models.NewSkill(skill[0], skill[1], "2xl"))
+		skillIcons = append(skillIcons, *models.NewSkill(skill[0], "brands", skill[1], "2xl"))
 	}
 	return skillIcons
 }

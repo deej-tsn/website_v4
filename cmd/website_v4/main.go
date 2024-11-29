@@ -1,6 +1,8 @@
 package main
 
 import (
+	"net/http"
+
 	"github.com/labstack/echo/v4"
 
 	"github.com/labstack/echo/v4/middleware"
@@ -52,17 +54,17 @@ func main() {
 
 	///HOME
 	e.GET("/", func(c echo.Context) error {
-		return helper.Render(c, 100, home)
+		return helper.Render(c, http.StatusOK, home)
 	})
 
 	//PROJECTS
 	e.GET("/projects", func(c echo.Context) error {
-		return helper.Render(c, 100, projectHome)
+		return helper.Render(c, http.StatusOK, projectHome)
 	})
 
 	/// BLOG
 	e.GET("/blog", func(c echo.Context) error {
-		return helper.Render(c, 100, blogHome)
+		return helper.Render(c, http.StatusOK, blogHome)
 	})
 	e.GET("/blog/posts/:slug", blogController.GetPost)
 	e.GET("/blog/posts", blogController.GetAllPosts)

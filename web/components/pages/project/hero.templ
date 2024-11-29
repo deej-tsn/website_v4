@@ -2,9 +2,10 @@ package components
 
 import "github.com/deej-tsn/website_v4/internal/models"
 
+
 templ Hero( project models.ProjectHero){
     <a class="projectHero" href={templ.SafeURL(project.Link)} target="_blank" referrerPolicy="no-referrer" >
-        <img class="heroImg" src={project.ImgURL}>
+        <img class={"heroImg", project.ImgFill} src={project.ImgURL}>
         <div class="heroInfo">
             <div style="display: flex; flex-direction: row; height: 5rem; width: 100%;">
                 <div class="title">
@@ -12,7 +13,7 @@ templ Hero( project models.ProjectHero){
                 </div>
                 <div class="heroSkills">
                     for _, skill := range project.Skills{
-                        @Icon(*models.NewSkill(skill[0], skill[1], "lg"))
+                        @Icon(*models.NewSkill(skill[1], skill[0],skill[2], "lg"))
                     }
                 </div>
             </div>
@@ -20,4 +21,5 @@ templ Hero( project models.ProjectHero){
             <p>{project.Description}</p>
         </div>
     </a>
+
 }
