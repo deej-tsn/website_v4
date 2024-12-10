@@ -3,7 +3,7 @@ package components
 import "github.com/deej-tsn/website_v4/internal/models"
 
 templ Section(title string, projects []models.ProjectHero) {
-    <div>
+    <section>
         <h2>{title}</h2>
         <div class="sectionProjects">
             for _, project := range projects {
@@ -11,5 +11,5 @@ templ Section(title string, projects []models.ProjectHero) {
         }
         </div>
 
-    </div>
+    </section>
 }

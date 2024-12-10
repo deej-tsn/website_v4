@@ -107,6 +107,11 @@
     }
 }
 
+section{
+    height: 25rem;
+    margin-bottom: 2rem;
+}
+
 .sectionProjects{
 
     display: flex;
@@ -135,6 +140,7 @@
 
     .sectionProjects{
         flex-direction: row;
+        align-items: normal;
     }
 
 }
