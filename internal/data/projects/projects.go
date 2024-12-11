@@ -7,6 +7,15 @@ import (
 var FrontendProjects []models.ProjectHero = []models.ProjectHero{
 
 	*models.NewProject(
+		"freeCodeCamp London Website",
+		"Crafted a clean, modern UI with a focus on simplicity and intuitive navigation, ensuring seamless integration of community links.",
+		"static/assets/projects/freeCodeCamp.png",
+		"cover",
+		[][]string{{"brands", "javascript", "js"}},
+		"https://freecodecamp.london/",
+	),
+
+	*models.NewProject(
 		"Wordle",
 		"Building a replica of wordle was fun and enhanced my skills. It provides hands-on experience in React Components design.",
 		"static/assets/projects/WordleClone.png",
@@ -21,15 +30,6 @@ var FrontendProjects []models.ProjectHero = []models.ProjectHero{
 		"contain",
 		[][]string{{"brands", "react", "react"}, {"brands", "javascript", "js"}},
 		"https://colourgamedempsey.netlify.app/",
-	),
-
-	*models.NewProject(
-		"freeCodeCamp London Website",
-		"Crafted a clean, modern UI with a focus on simplicity and intuitive navigation, ensuring seamless integration of community links.",
-		"static/assets/projects/freeCodeCamp.png",
-		"cover",
-		[][]string{{"brands", "javascript", "js"}},
-		"https://freecodecamp.london/",
 	),
 }
 
