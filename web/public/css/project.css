@@ -107,10 +107,7 @@
     }
 }
 
-section{
-    height: 25rem;
-    margin-bottom: 2rem;
-}
+
 
 .sectionProjects{
 
@@ -122,6 +119,11 @@ section{
 
 /* Medium Screen */
 @media (min-width: 768px) {
+
+    section{
+        height: 25rem;
+        margin-bottom: 2rem;
+    }
 
     #projects {
         h1{
