@@ -38,6 +38,7 @@
         height: 10rem;
         transition: height 0.3s ease-in-out;
         margin: 0;
+        display: block;
     }
 
     .cover {
@@ -49,7 +50,13 @@
     }
 
     .heroInfo{
+        width: 100%;
+        height: 100%;
         padding: 0 1rem 0 1rem;
+        background-color:#e3e1e1;
+        box-sizing: border-box;
+
+
     }
 
     .title{
