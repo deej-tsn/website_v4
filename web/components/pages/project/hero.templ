@@ -6,10 +6,7 @@ import "github.com/deej-tsn/website_v4/internal/models"
 templ Hero( project models.ProjectHero){
     <a class="projectHero" href={templ.SafeURL(project.Link)} target="_blank" referrerPolicy="no-referrer" >
         <img class="heroImg" src={project.ImgURL}>
-        <div class="overview">
-            <p>{project.Description}</p>
-            
-        </div>
+
     </a>
 
 }
