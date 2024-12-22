@@ -14,7 +14,7 @@ var Projects []models.ProjectHero = []models.ProjectHero{
 		"cover",
 		[][]string{{"brands", "javascript", "js"}},
 		"https://freecodecamp.london/",
-		helper.PROJECT_FRONTEND,
+		helper.PROJECTS_FRONTEND,
 	),
 
 	*models.NewProject(
@@ -24,7 +24,7 @@ var Projects []models.ProjectHero = []models.ProjectHero{
 		"cover",
 		[][]string{{"brands", "react", "react"}, {"brands", "javascript", "js"}},
 		"https://wordleclonedempsey.netlify.app",
-		helper.PROJECT_FRONTEND,
+		helper.PROJECTS_FRONTEND,
 	),
 	*models.NewProject(
 		"Color Theory",
@@ -33,7 +33,7 @@ var Projects []models.ProjectHero = []models.ProjectHero{
 		"contain",
 		[][]string{{"brands", "react", "react"}, {"brands", "javascript", "js"}},
 		"https://colourgamedempsey.netlify.app/",
-		helper.PROJECT_FRONTEND,
+		helper.PROJECTS_FRONTEND,
 	),
 
 	*models.NewProject(
@@ -48,6 +48,50 @@ var Projects []models.ProjectHero = []models.ProjectHero{
 			{"solid", "MySQL", "database"},
 		},
 		"https://github.com/deej-tsn/user-auth",
-		helper.PROJECT_BACKEND,
+		helper.PROJECTS_BACKEND,
+	),
+	//////////////
+
+	*models.NewProject(
+		"User Authentication",
+		"Fullstack app focused on robust user authentication, exploring modern techniques like JWTs and security.",
+		"static/assets/projects/UserAuth.svg",
+		"contain",
+		[][]string{
+			{"brands", "react", "react"},
+			{"brands", "javaScript", "js"},
+			{"brands", "Golang", "golang"},
+			{"solid", "MySQL", "database"},
+		},
+		"https://github.com/deej-tsn/user-auth",
+		helper.PROJECTS_BACKEND,
+	),
+	*models.NewProject(
+		"User Authentication",
+		"Fullstack app focused on robust user authentication, exploring modern techniques like JWTs and security.",
+		"static/assets/projects/UserAuth.svg",
+		"contain",
+		[][]string{
+			{"brands", "react", "react"},
+			{"brands", "javaScript", "js"},
+			{"brands", "Golang", "golang"},
+			{"solid", "MySQL", "database"},
+		},
+		"https://github.com/deej-tsn/user-auth",
+		helper.PROJECTS_BACKEND,
+	),
+	*models.NewProject(
+		"User Authentication",
+		"Fullstack app focused on robust user authentication, exploring modern techniques like JWTs and security.",
+		"static/assets/projects/UserAuth.svg",
+		"contain",
+		[][]string{
+			{"brands", "react", "react"},
+			{"brands", "javaScript", "js"},
+			{"brands", "Golang", "golang"},
+			{"solid", "MySQL", "database"},
+		},
+		"https://github.com/deej-tsn/user-auth",
+		helper.PROJECTS_BACKEND,
 	),
 }

@@ -61,6 +61,7 @@ func main() {
 	e.GET("/projects", func(c echo.Context) error {
 		return helper.Render(c, http.StatusOK, projectHome)
 	})
+	e.GET("/projects/posts", routes.GetProjects)
 
 	/// BLOG
 	e.GET("/blog", func(c echo.Context) error {

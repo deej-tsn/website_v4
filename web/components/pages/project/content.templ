@@ -1,10 +1,8 @@
 package components
 
-import "github.com/deej-tsn/website_v4/internal/data/projects"
-
 templ Content() {
     <div id="projects">
         @FilterMenu()
-        @ProjectList(projects.FrontendProjects)
+        @LoadProjects()
     </div>
 }

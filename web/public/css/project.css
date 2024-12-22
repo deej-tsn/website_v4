@@ -29,12 +29,12 @@
 
 .projectHero {
     display: block;
-    width: 20rem;
-    height: 20rem;
+    width: 30rem;
+    height: 50rem;
     background-color: var(--white);
     cursor: pointer;
     filter: var(--drop_shadow);
-    border-radius: 10px;
+    border-radius: 28px;
     overflow: hidden;
     transition: height 0.3s ease-in-out;
     text-decoration: none;
@@ -111,7 +111,7 @@
 }
 
 .projectHero:hover {
-    height: 23rem;
+    
 
     img {
         height: 18rem;
@@ -122,15 +122,17 @@
     }
 }
 
-
-
-.sectionProjects{
-
+#projectList{
+    width: fit-content;
+    height: fit-content;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
 }
 
+#projectLoader{
+    width: 100%;
+    overflow-x: auto;
+}
 
 /* Medium Screen */
 @media (min-width: 768px) {
