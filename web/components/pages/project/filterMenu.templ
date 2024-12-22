@@ -1,0 +1,30 @@
+package components
+
+templ FilterMenu() {
+    <div class="select_wrap">
+        <label for="filterToProjects">Filter to:</label>
+        <select name="filter" id="filterToProjects" hx-get="/projects/posts" hx-target="#projectLoader" hx-swap="innerHTML" hx-trigger=" load, change">
+            <option value="all" selected>All</option>     
+            <option value="frontend">Frontend Only</option>
+            <option value="backend">Backend Only</option>
+        </select>
+
+    </div>
+    <script type="text/javascript">
+        const filterTo = document.getElementById("filterToProjects");
+        const localStorageFilter = localStorage.getItem("filterToProjects");
+        if(localStorageFilter === null){
+            filterTo.value = "all";
+        }else{
+            filterTo.value = localStorageFilter;
+        }
+
+
+        filterTo.addEventListener("change", function() {
+            const newFilter = filterTo.value;
+            console.log(newFilter)
+            localStorage.setItem("filterTo", newFilter);
+        });
+  
+    </script>
+}

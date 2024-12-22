@@ -1,10 +1,11 @@
 package projects
 
 import (
+	"github.com/deej-tsn/website_v4/internal/helper"
 	"github.com/deej-tsn/website_v4/internal/models"
 )
 
-var FrontendProjects []models.ProjectHero = []models.ProjectHero{
+var Projects []models.ProjectHero = []models.ProjectHero{
 
 	*models.NewProject(
 		"freeCodeCamp London Website",
@@ -13,6 +14,7 @@ var FrontendProjects []models.ProjectHero = []models.ProjectHero{
 		"cover",
 		[][]string{{"brands", "javascript", "js"}},
 		"https://freecodecamp.london/",
+		helper.PROJECT_FRONTEND,
 	),
 
 	*models.NewProject(
@@ -22,6 +24,7 @@ var FrontendProjects []models.ProjectHero = []models.ProjectHero{
 		"cover",
 		[][]string{{"brands", "react", "react"}, {"brands", "javascript", "js"}},
 		"https://wordleclonedempsey.netlify.app",
+		helper.PROJECT_FRONTEND,
 	),
 	*models.NewProject(
 		"Color Theory",
@@ -30,10 +33,8 @@ var FrontendProjects []models.ProjectHero = []models.ProjectHero{
 		"contain",
 		[][]string{{"brands", "react", "react"}, {"brands", "javascript", "js"}},
 		"https://colourgamedempsey.netlify.app/",
+		helper.PROJECT_FRONTEND,
 	),
-}
-
-var BackendProjects []models.ProjectHero = []models.ProjectHero{
 
 	*models.NewProject(
 		"User Authentication",
@@ -47,5 +48,6 @@ var BackendProjects []models.ProjectHero = []models.ProjectHero{
 			{"solid", "MySQL", "database"},
 		},
 		"https://github.com/deej-tsn/user-auth",
+		helper.PROJECT_BACKEND,
 	),
 }
