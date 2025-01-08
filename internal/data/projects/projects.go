@@ -8,6 +8,15 @@ import (
 var Projects []models.ProjectHero = []models.ProjectHero{
 
 	*models.NewProject(
+		"collabarative Sudoku (with Chat)",
+		"",
+		"static/assets/projects/compSudoku.webp",
+		[][]string{{""}},
+		"https://sudoku.dempseypalaciotascon.com",
+		helper.PROJECTS_ALL,
+	),
+
+	*models.NewProject(
 		"freeCodeCamp London Website",
 		"Crafted a clean, modern UI with a focus on simplicity and intuitive navigation, ensuring seamless integration of community links.",
 		"static/assets/projects/freeCodeCampLdn.webp",

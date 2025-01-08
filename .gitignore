@@ -1,3 +1,4 @@
 /web/components/**/*.go
 /tmp
 .vscode
+/extra
