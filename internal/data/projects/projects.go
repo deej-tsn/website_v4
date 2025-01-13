@@ -13,7 +13,7 @@ var Projects []models.ProjectHero = []models.ProjectHero{
 		"static/assets/projects/compSudoku.webp",
 		[][]string{{""}},
 		"https://sudoku.dempseypalaciotascon.com",
-		helper.PROJECTS_ALL,
+		helper.PROJECTS_BACKEND,
 	),
 
 	*models.NewProject(
