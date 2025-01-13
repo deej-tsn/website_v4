@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/labstack/echo/v4"
 
@@ -33,6 +34,12 @@ func main() {
 	// logs all http requests
 	e.Use(middleware.Logger())
 
+	PORT := os.Getenv("PORT")
+	if PORT == "" {
+		PORT = ":80"
+	}
+	e.Server.Addr = PORT
+
 	// static files in public folder
 	e.Static("static", pathToWeb)
 
@@ -61,6 +68,7 @@ func main() {
 	e.GET("/projects", func(c echo.Context) error {
 		return helper.Render(c, http.StatusOK, projectHome)
 	})
+	e.GET("/projects/posts", routes.GetProjects)
 
 	/// BLOG
 	e.GET("/blog", func(c echo.Context) error {

@@ -1,14 +1,8 @@
 package components
 
-import "github.com/deej-tsn/website_v4/internal/data/projects"
-
 templ Content() {
     <div id="projects">
-        <h1>Projects</h1>
-        <div id="sectionHolder">
-            @Section("Frontend" , projects.FrontendProjects)
-            @Section("Backend", projects.BackendProjects)
-            @Section("Other", nil)
-        </div>
+        @FilterMenu()
+        @LoadProjects()
     </div>
 }

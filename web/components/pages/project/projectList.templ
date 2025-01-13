@@ -1,0 +1,11 @@
+package components
+
+import "github.com/deej-tsn/website_v4/internal/models"
+
+templ ProjectList(projects []models.ProjectHero) {
+    <div id="projectList">
+        for _, project := range projects {
+            @Hero(project)
+        }
+    </div>
+}

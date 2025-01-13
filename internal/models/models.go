@@ -44,6 +44,7 @@ type (
 		Skills      [][]string
 		Link        string
 		GithubLink  string
+		Type        int
 	}
 )
 
@@ -64,14 +65,14 @@ func NewSkill(name string, source string, url string, size string) *SkillIcon {
 	return &skill
 }
 
-func NewProject(title string, description string, imgURL string, imgFill string, skills [][]string, link string) *ProjectHero {
+func NewProject(title string, description string, imgURL string, skills [][]string, link string, typeProject int) *ProjectHero {
 	project := ProjectHero{
 		Title:       title,
 		Description: description,
 		ImgURL:      imgURL,
-		ImgFill:     imgFill,
 		Skills:      skills,
 		Link:        link,
+		Type:        typeProject,
 	}
 	return &project
 }
