@@ -8,6 +8,15 @@ import (
 var Projects []models.ProjectHero = []models.ProjectHero{
 
 	*models.NewProject(
+		"Split bills with a snap",
+		"",
+		"static/assets/projects/billsplitter.webp",
+		[][]string{{""}},
+		"https://billsplitter.dempseypalaciotascon.com",
+		helper.PROJECTS_FRONTEND,
+	),
+
+	*models.NewProject(
 		"collabarative Sudoku (with Chat)",
 		"",
 		"static/assets/projects/compSudoku.webp",
@@ -41,8 +50,6 @@ var Projects []models.ProjectHero = []models.ProjectHero{
 		"https://colourgamedempsey.netlify.app/",
 		helper.PROJECTS_FRONTEND,
 	),
-
-	//////////////
 
 	*models.NewProject(
 		"User Authentication",
